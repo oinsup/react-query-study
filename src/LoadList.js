@@ -6,8 +6,20 @@ import Pagination from "./components/pagination/Pagination";
 export default function LoadList(){
     const [pageNo, setPageNo] = useState(1);
     const [pageGroup, setPageGroup] = useState(1);
-    const loadList = useQuery(['loadlist',pageNo,pageGroup],() => loadListApi(pageNo));
+    const loadList = useQuery(['loadlist',pageNo,pageGroup],() => loadListApi(pageNo),{
+        //cacheTime:2000,
+        refetchInterval:3000
+    });
+    const [num, setNum] = useState(0)
+    useEffect(() => {
+        if(loadList.isFetching === true){
 
+            setNum(num + 1)
+            console.log(num+'번째 리패칭');
+        }
+        //console.log(loadList.isLoading ? '로딩맞아' : '로딩아냐');
+
+    },[loadList.isFetching])
     return (
         <div>
             {
@@ -42,6 +54,10 @@ export default function LoadList(){
                             setPageNo={setPageNo}
                             data={loadList.data.data}
                         />
+                        <p>
+                            {loadList.isFetching ? "페칭" : ''}
+                            {num}
+                        </p>
                     </>
             }
 
