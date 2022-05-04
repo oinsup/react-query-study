@@ -1,7 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React, {ReactEventHandler, useEffect, useState} from 'react';
 import {PaginationWrap} from "./style";
 
-export default function Pagination({data,pageNo,setPageNo,pageGroup,setPageGroup}) {
+interface PagiProps {
+    data: {
+        totalPages:number,
+        pageable:{
+            pageSize:number
+        }
+    },
+    pageNo:number,
+    setPageNo:React.Dispatch<number>,
+    pageGroup:number,
+    setPageGroup:React.Dispatch<number>
+}
+
+
+export default function Pagination({data,pageNo,setPageNo,pageGroup,setPageGroup}:PagiProps) {
     const [startRow, setStartRow] = useState(1);
     const [pageable,setPageable] = useState({
         pageSize:data.pageable.pageSize,

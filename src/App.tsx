@@ -2,15 +2,17 @@ import React, {useState} from 'react';
 import {useQuery} from "react-query";
 import {fetchApi} from "./api/common";
 import LoadList from "./LoadList";
+import './common.scss'
+import TestComp from "./components/TestComp";
 
 
 
 
 const App = () => {
-    const [num,setNum] = useState(1)
-    const {data,status} = useQuery([num], () => fetchApi(num),{
+    const [num,setNum] = useState<number>(1)
+    const {data,status} = useQuery(['posts',num], () => fetchApi(num),{
     });
-    const onClick = (dir) =>{
+    const onClick = (dir:string) =>{
         if (dir === 'up'){
             setNum(num+1)
         }else{
@@ -18,6 +20,7 @@ const App = () => {
         }
 
     }
+    const [state, setState] = useState<string>('')
     return (
         <div>
             <span>상태 : {status}</span>
@@ -26,6 +29,10 @@ const App = () => {
             <button onClick={() => onClick('down')}>-</button>
             <button onClick={() => onClick('up')}>+</button>
             <LoadList/>
+            <input type={'text'} className={'after'} onChange={(e) => {
+                setState(e.target.value)
+            }} value={state}/>
+            <TestComp num={num}/>
         </div>
     );
 };

@@ -4,12 +4,9 @@ import {loadListApi} from "./api/common";
 import Pagination from "./components/pagination/Pagination";
 
 export default function LoadList(){
-    const [pageNo, setPageNo] = useState(1);
-    const [pageGroup, setPageGroup] = useState(1);
-    const loadList = useQuery(['loadlist',pageNo,pageGroup],() => loadListApi(pageNo),{
-        //cacheTime:2000,
-        refetchInterval:3000
-    });
+    const [pageNo, setPageNo] = useState<number>(1);
+    const [pageGroup, setPageGroup] = useState<number>(1);
+    const loadList = useQuery(['loadlist',pageNo,pageGroup],() => loadListApi(pageNo));
     const [num, setNum] = useState(0)
     useEffect(() => {
         if(loadList.isFetching === true){
@@ -35,7 +32,7 @@ export default function LoadList(){
                             </thead>
                             <tbody>
                             {
-                                loadList.data.data.content.map((i,index) => {
+                                loadList.data.data.content.map((i:any,index:any) => {
                                     return(
                                         <tr key={index}>
                                             <td>{i.loadingId}</td>
