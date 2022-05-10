@@ -1,3 +1,10 @@
 @charset "utf-8";
 
 .after:after{content:'%';display:inline-block;}
+
+.flex{display:flex;
+  &.sb{justify-content:space-between;}
+  &.ac{align-items:center;}
+  .f1{flex:1;}
+}
+

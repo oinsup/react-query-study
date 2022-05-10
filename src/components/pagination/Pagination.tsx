@@ -69,7 +69,7 @@ export default function Pagination({data,pageNo,setPageNo,pageGroup,setPageGroup
 
     return (
         <>
-            <PaginationWrap>
+            <PaginationWrap width={75} height={70}>
                 {
                     totalPages < pageSize || pageGroup === 1 ? null :
                         <>

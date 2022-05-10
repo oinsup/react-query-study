@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
 import {useQuery} from "react-query";
-import {fetchApi} from "./api/common";
+import {fetchApi2} from "./api/common";
 import LoadList from "./LoadList";
 import './common.scss'
 import TestComp from "./components/TestComp";
+import Dashboard from "./pages/Dashboard";
 
 
 
 
 const App = () => {
     const [num,setNum] = useState<number>(1)
-    const {data,status} = useQuery(['posts',num], () => fetchApi(num),{
+    const {data,status} = useQuery(['posts',num], () => fetchApi2(num),{
     });
     const onClick = (dir:string) =>{
         if (dir === 'up'){
@@ -33,6 +34,7 @@ const App = () => {
                 setState(e.target.value)
             }} value={state}/>
             <TestComp num={num}/>
+            <Dashboard/>
         </div>
     );
 };
