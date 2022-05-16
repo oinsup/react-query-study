@@ -1,3 +1,4 @@
+/*
 import React, {useState} from 'react';
 import {useQuery} from "react-query";
 import {fetchApi2} from "./api/common";
@@ -35,6 +36,21 @@ const App = () => {
             }} value={state}/>
             <TestComp num={num}/>
             <Dashboard/>
+        </div>
+    );
+};
+
+export default App;*/
+
+
+import React from 'react';
+import './common.scss'
+import Home from "./pages/Home";
+
+const App = () => {
+    return (
+        <div id={'wrap'}>
+            <Home/>
         </div>
     );
 };

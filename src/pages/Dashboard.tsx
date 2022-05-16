@@ -54,7 +54,6 @@ const Title = styled.h2`
   margin:0;
   font-size:24px;
 `
-
 const Btn = styled.button`
   background-color: ${props => props.theme || '#ffffff'};
 

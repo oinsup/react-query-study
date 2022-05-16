@@ -20,6 +20,7 @@ interface dataProps {
     num : number
 }
 
+
 export const fetchApi = async (num:number) => {
     const {data} = await axios.get(`http://118.67.135.235:8080/api/admin/location/unloading/${num}`)
     return data;

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <clipPath id="5ejq7s1tha">
+            <path data-name="사각형 35007" style="fill:none" d="M0 0h28v28H0z"/>
+        </clipPath>
+        <clipPath id="zmv4j6ewob">
+            <path data-name="사각형 35010" style="stroke:#e5e7eb;fill:none" d="M0 0h28v28H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 45">
+        <g data-name="그룹 38">
+            <g data-name="그룹 37" style="clip-path:url(#5ejq7s1tha)" transform="translate(2 2)">
+                <path data-name="사각형 35006" transform="translate(10.706 .824)" style="stroke-linejoin:round;stroke-width:2px;stroke:#e5e7eb;fill:none" d="M0 0h6.588v6.588H0z"/>
+            </g>
+        </g>
+        <g data-name="그룹 40">
+            <g data-name="그룹 39" style="clip-path:url(#zmv4j6ewob)" transform="translate(2 2)">
+                <path data-name="사각형 35009" transform="translate(.824 20.588)" style="stroke-linejoin:round;stroke-width:2px;stroke:#e5e7eb;fill:none" d="M0 0h6.588v6.588H0z"/>
+            </g>
+        </g>
+        <g data-name="그룹 42">
+            <g data-name="그룹 41" style="clip-path:url(#5ejq7s1tha)" transform="translate(2 2)">
+                <path data-name="사각형 35012" transform="translate(10.706 20.588)" style="stroke-linejoin:round;stroke-width:2px;stroke:#e5e7eb;fill:none" d="M0 0h6.588v6.588H0z"/>
+            </g>
+        </g>
+        <g data-name="그룹 44">
+            <g data-name="그룹 43" style="clip-path:url(#5ejq7s1tha)" transform="translate(2 2)">
+                <path data-name="사각형 35015" transform="translate(20.588 20.588)" style="stroke-linejoin:round;stroke-width:2px;stroke:#e5e7eb;fill:none" d="M0 0h6.588v6.588H0z"/>
+            </g>
+        </g>
+        <path data-name="패스 13128" d="M5 25v-8h18v8" transform="translate(2 -1.923)" style="stroke-linejoin:round;stroke-width:2px;stroke:#e5e7eb;fill:none"/>
+        <path data-name="선 1" transform="translate(16 9)" style="stroke-linejoin:round;stroke-width:2px;stroke:#e5e7eb;fill:none" d="M0 14V0"/>
+    </g>
+</svg>
